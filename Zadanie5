@@ -1,0 +1,56 @@
+//Zadanie5
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj tytul pierwszego utworu");
+        String title1 = scanner.nextLine();
+        System.out.println("Podaj tytul drugiego utworu");
+        String title2 = scanner.nextLine();
+        System.out.println("Podaj czas trwania pierwszego utworu (minuty)");
+        int minute1 = scanner.nextInt();
+        System.out.println("Podaj czas trwania pierwszego utworu (sekundy)");
+        int second1 = scanner.nextInt();
+        System.out.println("Podaj czas trwania drugiego utworu (minuty)");
+        int minute2 = scanner.nextInt();
+        System.out.println("Podaj czas trwania drugiego utworu (sekundy)");
+        int second2 = scanner.nextInt();
+        int sumtime1 = minute1*60 + second1;
+        int sumtime2 = minute2*60 + second2;
+        int dminutes = second1+second2;
+        song(title1, minute1, second1, sumtime1, title2, minute2, second2, sumtime2, dminutes);
+        scanner.close();
+    }
+
+    public static void song(String t1, int m1, int s1, int st1, String t2, int m2, int s2, int st2, int dm) {
+     String sentence = "";
+     String sentence2 = "";
+     String sentence3 = "";
+     int ss = s1+s2;
+     int dm2 = m1+m2+1;
+     int sm = m1+m2;
+     int rs = s1+s2-60;
+
+
+     if (st1<st2){
+         sentence = "1. "+ t1 +" " +m1+":"+s1;
+         sentence2 = "2. "+ t2 + " "+m2+":"+s2;
+    }else if (st1>=st2){
+         sentence = "1. "+ t2+ " "+m2+":"+s2;
+         sentence2 = "2. "+t1+" "+m1+":"+s1;
+     }
+     if (dm<60){
+         sentence3 = sm+":"+ss;
+     } else if (dm>=60){
+         sentence3 = dm2+":"+rs;
+     }
+    System.out.println("----------------------------------");
+     System.out.println("Utwory:");
+     System.out.println(sentence);
+     System.out.println(sentence2);
+     System.out.println("LACZNY CZAS TRWANIA "+sentence3);
+     System.out.print("----------------------------------");
+        }
+
+    }
