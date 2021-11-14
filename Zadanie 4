@@ -1,0 +1,33 @@
+//Zadanie4
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Czy otrzymano rabat?");
+        String rabat = scanner.nextLine();
+        System.out.println("Ile sztuk towaru kupiono?");
+        double sztuki = scanner.nextDouble();
+        double cena = 10.0;
+        wartoscZakupu(sztuki,rabat,cena);
+        scanner.close();
+    }
+
+    public static void wartoscZakupu(double szt, String rbt,double cena1) {
+     String sentence = "";
+    double bezRbt = cena1*1.1;
+    double bezRbtSzt=bezRbt*szt;
+    double zRbt1 = cena1/2.0;
+    double lCena = cena1*szt;
+     if (rbt.equals("nie")|| rbt.equals("NIE")|| rbt.equals("Nie")){
+         sentence = "Laczna wartość zamowienia to "+bezRbtSzt+" zl";
+    }else if (rbt.equals("tak")||rbt.equals("TAK")||rbt.equals("Tak")&& szt<10.0){
+         sentence = "Laczna wartość zamowienia to "+lCena+" zł";
+     } else if (rbt.equals("tak")&& szt>=10){
+         sentence = "Łaczna wartość zamowienia to "+zRbt1+" zł";
+     }
+    System.out.println("----------------------------------");
+     System.out.println(sentence);
+     System.out.print("----------------------------------");
+        }
+    }
