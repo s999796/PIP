@@ -1,0 +1,29 @@
+//Zadanie2
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj miesiąc (numer)");
+        String month = scanner.nextLine();
+        System.out.println("Podaj rok");
+        String year = scanner.nextLine();
+        quarter(month, year);
+        scanner.close();
+    }
+
+    public static void quarter(String quarter1, String year1) {
+     String sentence = "";
+     if (quarter1.equals("1")|| quarter1.equals("2")|| quarter1.equals("3")){
+         sentence="I kwartal";
+    }else if (quarter1.equals("4") ||quarter1.equals("5")||quarter1.equals("6")){
+         sentence="II kwartal";
+     }else if (quarter1.equals("7")||quarter1.equals("8")||quarter1.equals("9")){
+         sentence="III kwartal";
+     }else if (quarter1.equals("10")||quarter1.equals("11")||quarter1.equals("12")){
+         sentence="IV kwartal";
+     }
+System.out.print(quarter1+"."+year1+" to "+sentence+" "+year1+" roku");
+
+        }
+    }
