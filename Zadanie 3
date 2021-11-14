@@ -1,0 +1,22 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int year;
+        boolean czyPrzestepny;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj rok");
+        year = getInt();
+        if ((year%4==0&&year%100!=0)||year%400==0){
+            czyPrzestepny=true;
+        }else {
+            czyPrzestepny = false;
+        }
+        System.out.println("Czy rok jest przestępny: "+czyPrzestepny);
+        scanner.close();
+    }
+
+    public static int getInt() {
+        return new Scanner(System.in).nextInt();
+        }
+    }
