@@ -1,3 +1,59 @@
+//Zadanie 2
+package com.company;
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.println("Podaj liczbe całkowitą"); 
+int liczba = scanner.nextInt();
+podzielnosc(liczba);
+scanner.close(); 
+}
+public static void podzielnosc (int liczBa) {
+boolean flag = false;
+if (liczBa % 2==0){
+flag = true; 
+System.out.println("Liczba "+ liczBa + " jest podzielna przez 2.");
+}if (liczBa % 3 ==0){
+flag = true; 
+System.out.println("Liczba "+ liczBa + " jest podzielna przez 3");
+} if (liczBa % 5==0){
+flag = true;
+System.out.println("Liczba "+liczBa+" jest podzielna przez 5.");
+}if (!flag){
+System.out.println("Liczba "+liczBa+" nie jest podzielna przez 2,3 lub 5."); 
+}
+}
+}
+
+
+//Zadanie 3
+package com.company;
+mport java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+System.out.println("Podaj jedną liczbe całkowitą maksymalnie czterocyfrową");
+int liczba = scanner.nextInt();
+ilecyfrowa (liczba);
+scanner.close();
+}
+public static void ilecyfrowa (int liczBa) {
+if (liczBa <0){
+liczBa*=-1;
+}if (liczBa/10 ==0){
+System.out.println("Liczba "+ liczBa + " jest jednocyfrowa.");
+}else if (liczBa/100==0){
+System.out.println("Liczba "+liczBa+" jest dwucyfrowa.");
+}else if (liczBa/1000==0){
+System.out.println("Liczba "+ liczBa+ " jest trzycyfrowa.");
+}else if (liczBa/10000==0){
+System.out.println("Liczba "+liczBa+ " jest czterocyfrowa"); 
+}
+}
+}
+
+
 //Zadanie 4
 package com.company;
 import java.util.Scanner;
@@ -56,4 +112,61 @@ public class Main {
 
         }
     }
+}
+
+
+//Zadanie 5
+package com.company;
+import java.util.Scanner;
+public class Main {  
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);   
+System.out.println("Podaj liczbe całkowitą z zakresu 1-12");  
+int month = scanner.nextInt(); 
+monthSlownie(month);
+scanner.close();  
+}   
+public static void monthSlownie (int nbmonth) { 
+switch (nbmonth){       
+case 1:   
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: luty, marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień");
+break; 
+case 2:  
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: marzec, kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień");
+break;
+case 3:               
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: kwiecień, maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień");
+break;    
+case 4:   
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: maj, czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień");
+break;    
+case 5:        
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: czerwiec, lipiec, sierpień, wrzesień, październik, listopad, grudzień");
+break; 
+case 6:       
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: lipiec, sierpień, wrzesień, październik, listopad, grudzień");   
+break;        
+case 7:
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: sierpień, wrzesień, październik, listopad, grudzień");     
+break; 
+case 8:    
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: wrzesień, październik, listopad, grudzień");        
+break;
+case 9:
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: październik, listopad, grudzień");   
+break;
+case 10:      
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: listopad, grudzień"); 
+break;     
+case 11:
+System.out.println("Do końca roku czekają Cię jeszcze miesiące: grudzień");
+break;
+case 12:
+System.out.println("Hura! To już koniec roku"); 
+break;         
+default:
+System.out.println("Podałeś złą wartość");     
+return;      
+}   
+}
 }
