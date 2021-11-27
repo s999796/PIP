@@ -1,0 +1,59 @@
+//Zadanie 4
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner scanner = new Scanner(System.in);
+    System.out.println("Podaj liczbe całkowitą z zakresu 1-12");
+    int month = scanner.nextInt();
+    monthSlownie(month);
+    scanner.close();
+    }
+    public static void monthSlownie (int nbmonth) {
+        switch (nbmonth){
+            case 1:
+                System.out.println("Wspomniałeś styczeń");
+                break;
+            case 2:
+                System.out.println("Wspomniałeś luty");
+                break;
+            case 3:
+                System.out.println("Wspomniałeś marzec");
+                break;
+            case 4:
+                System.out.println("Wspomniałeś kwiecień");
+                break;
+            case 5:
+                System.out.println("Wspomniałeś maj");
+                break;
+            case 6:
+                System.out.println("Wspomniałeś czerwiec");
+                break;
+            case 7:
+                System.out.println("Wspomniałeś lipiec");
+                break;
+            case 8:
+                System.out.println("Wspomniałeś sierpień");
+                break;
+            case 9:
+                System.out.println("Wspomniałeś wrzesień");
+                break;
+            case 10:
+                System.out.println("Wspomniałeś październik");
+                break;
+            case 11:
+                System.out.println("Wspomniałeś listopad");
+                break;
+            case 12:
+                System.out.println("Wspomniałeś grudzień");
+                break;
+            default:
+                System.out.println("Podałeś złą wartość");
+                return;
+
+
+
+        }
+    }
+}
