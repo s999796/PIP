@@ -1,3 +1,87 @@
+//Zadanie 1
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj proszę, jaka figura Ciebie interesuje:\n"+ "\t1 – prostokąt\n" + "\t2 – kwadrat\n" + "\t3 – trójkąt\n" + "\t4 – romb\n" + "\t5 – równoległobok\n" + "\t6 – trapez\n");
+        int opcja = scanner.nextInt();
+        switch (opcja){
+            case 1:
+                System.out.println("Wybrałeś prostokąt");
+                System.out.println("Podaj długość boku a:");
+                double bokA=scanner.nextDouble();
+                System.out.println("Podaj długość boku b:");
+                double bokB= scanner.nextDouble();
+                poleProstokąta(bokA,bokB);
+                break;
+            case 2:
+                System.out.println("Wybrałeś kwadrat");
+                System.out.println("Podaj długość boku:");
+                double bokC = scanner.nextDouble();
+                poleKwadratu(bokC);
+                break;
+            case 3:
+                System.out.println("Wybrałeś trójkąt");
+                System.out.println("Podaj długość podstawy:");
+                double podstawaTr = scanner.nextDouble();
+                System.out.println("Podaj długość wysokości:");
+                double wysokTr = scanner.nextDouble();
+                poleTrojkata(podstawaTr,wysokTr );
+                break;
+            case 4:
+                System.out.println("Wybrałeś romb");
+                System.out.println("Podaj długość boku:");
+                double podstRomb = scanner.nextDouble();
+                System.out.println("Podaj długość wysokości");
+                double wysokRomb = scanner.nextDouble();
+                poleRombu(podstRomb, wysokRomb);
+                break;
+            case 5:
+                System.out.println("Wybrałeś równoległobok");
+                System.out.println("Podaj długość boku:");
+                double podstRownoleg = scanner.nextDouble();
+                System.out.println("Podaj długość wysokości:");
+                double wysRownoleg = scanner.nextDouble();
+                poleRombu(podstRownoleg, wysRownoleg);
+                break;
+            case 6:
+                System.out.println("Wybrałeś trapez");
+                System.out.println("Podaj długość krótszego boku:");
+                double bokKrTrapez = scanner.nextDouble();
+                System.out.println("Podaj długość dłuższego boku:");
+                double bokDlTrapez = scanner.nextDouble();
+                System.out.println("Podaj długość wysokości");
+                double wysTrapez = scanner.nextDouble();
+                poleTrapezu(bokKrTrapez, bokDlTrapez, wysTrapez);
+                break;
+        }
+        scanner.close();
+    }
+    public static void poleProstokąta(double bokAA, double bokBB) {
+        double poleProst = bokAA*bokBB;
+        System.out.println("Pole prostokąta to"+ poleProst);
+    }
+    public static void poleKwadratu (double bokCC){
+        double poleKwad = bokCC*bokCC;
+        System.out.println("Pole kwadratu to "+poleKwad);
+    }
+    public static void poleTrojkata (double podstTroj, double wysokTroj){
+        double poleTr = 0.5*(podstTroj*wysokTroj);
+        System.out.println("Pole trójkąta to"+poleTr);
+    }
+    public static void poleRombu (double podstRomb1, double wysokoscRomb1){
+        double poleRomb = podstRomb1*wysokoscRomb1;
+        System.out.println("Pole rombu to "+poleRomb);
+    }
+    public static void poleTrapezu (double bokTrapez1, double bokTrapez2, double wysokTrapez){
+        double poleTrapez = 0.5 * ((bokTrapez1+bokTrapez2)*wysokTrapez);
+        System.out.println("Pole trapezu to "+ poleTrapez);
+    }
+}
+
+
 //Zadanie 2
 package com.company;
 import java.util.Scanner;
