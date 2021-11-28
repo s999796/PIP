@@ -191,9 +191,6 @@ public class Main {
             default:
                 System.out.println("Podałeś złą wartość");
                 return;
-
-
-
         }
     }
 }
