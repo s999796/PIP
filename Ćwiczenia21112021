@@ -194,3 +194,29 @@ public class Main {
         }
     }
 }
+
+//Zadanie 7
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj pierwszą liczbę całkowitą dodatnią");
+        int liczba = scanner.nextInt();
+        System.out.println("Podaj drugą liczbę całkowitą dodatnią");
+        int liczba2 = scanner.nextInt();
+        System.out.println("Podaj trzecią liczbę całkowitą dodatnią");
+        int liczba3 = scanner.nextInt();
+        przystajaceLiczby(liczba, liczba2, liczba3);
+        scanner.close();
+    }
+
+    public static void przystajaceLiczby(int liCzba, int liCzba2, int liCzba3) {
+        if ((liCzba-liCzba2)%liCzba3==0) {
+            System.out.println("Liczby "+liCzba+ " i "+liCzba2+" przystają do siebie modulo "+liCzba3);
+        } if ((liCzba-liCzba2)%liCzba3!=0){
+            System.out.println("Liczby "+liCzba+ " i "+liCzba2+" nie przystają do siebie modulo "+liCzba3);
+        }
+    }
+}
