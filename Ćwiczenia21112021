@@ -170,3 +170,27 @@ return;
 }   
 }
 }
+
+//Zadanie 6
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj liczbę rzeczywistą");
+        double liczba = scanner.nextDouble();
+        signum(liczba);
+        scanner.close();
+    }
+
+    public static void signum(double liczba1) {
+        if (liczba1 > 0) {
+            System.out.println("Wartość funkcji signum dla "+liczba1+" to -1");
+        } if (liczba1 == 0)
+            System.out.println("Wartość funkcji signum dla "+liczba1+" to 0");
+        if (liczba1 < 0) {
+            System.out.println("Wartość funkcji signum dla "+liczba1+" to -1");
+        }
+    }
+}
